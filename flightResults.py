@@ -2,5 +2,11 @@ import pandas as pd
 import numpy as np
 import math
 
-def flightResults():
-    units = input("")
+def extractData(filepath):
+    # units = input("Define Units (I for SI, C for Customary): ")
+
+    altimeterData = pd.read_csv(filepath)
+    return(altimeterData)
+
+flightResults = extractData('C:/Users/gator/Downloads/pdfFiltBaroFixed.csv')
+print(flightResults)
