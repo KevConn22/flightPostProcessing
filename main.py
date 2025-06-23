@@ -1,10 +1,10 @@
 import math
 import numpy as np
 import pandas as pd
-import flightResults
+import dataProcessing
 
 filepath = 'C:/Users/gator/Downloads/pdfFiltBaroFixed.csv'
-flightData = flightResults.extractData(filepath)
+flightData = dataProcessing.extractData(filepath)
 
 # Define targets for flight
 targets = []
