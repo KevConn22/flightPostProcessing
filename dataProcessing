@@ -7,6 +7,3 @@ def extractData(filepath):
 
     altimeterData = pd.read_csv(filepath)
     return(altimeterData)
-
-flightResults = extractData('C:/Users/gator/Downloads/pdfFiltBaroFixed.csv')
-print(flightResults)
