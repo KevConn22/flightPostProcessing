@@ -12,7 +12,7 @@ def extractData():
     filepath = filedialog.askopenfilename()
     file = open(filepath, 'r')
     altimeterData = pd.read_csv(file)
-    
+
     if altimeterData.at[0, 'time'] < 0:
         altimeterData['time'] = altimeterData['time'] - altimeterData.at[0, 'time']
     if units == "Y" or "y":
@@ -37,4 +37,3 @@ def findAscentCharacteristics(data):
 
 def findDescentCharacteristics(data):
     print("Hello world!")
-
