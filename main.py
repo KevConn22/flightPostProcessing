@@ -15,7 +15,7 @@ column headers exactly matching the following:
 time | altitude | velocity
 
 Again, please title the columns 'time', 'altitude', and 'velocity' EXACTLY. 
-No unit designation is required. Unit conversions are performed based on subsequent user input.
+No unit designation is required. Unit conversions are performed based on user input within the algorithm. 
 """
 
 ## Preliminary Inputs
