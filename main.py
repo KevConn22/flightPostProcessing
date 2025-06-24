@@ -24,10 +24,10 @@ flightData = dataProcessing.extractData()
 
 ## Post-Processing of Flight Data
 # Post-processes flight data to determine flight characteristics
-realApogee = dataProcessing.findAscentCharacteristics(flightData)[0]
-realApogeeTime = dataProcessing.findAscentCharacteristics(flightData)[1]
-realMaxVelocity = dataProcessing.findAscentCharacteristics(flightData)[2]
-
+ascentCharacteristics = dataProcessing.findAscentCharacteristics(flightData)
+realApogee = ascentCharacteristics[0]
+realApogeeTime = ascentCharacteristics[1]
+realMaxVelocity = ascentCharacteristics[2]
 
 descentCharacteristics = dataProcessing.findDescentCharacteristics(flightData)
 realDrogueDescent = descentCharacteristics[0]
