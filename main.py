@@ -9,10 +9,12 @@ from tkinter import filedialog
 
 """
 Program is designed to post-process the results of SRM model rockets, using altimeter data.
-Pre-processing on data is required. Please format the data columns in the CSV as follows, without column headers:
+Pre-processing on data is required. Please format the data columns in the CSV as follows, with 
+column headers exactly matching the following:
 
-Time  |  Altitude  |  Velocity
+time | altitude | velocity
 
+Again, please title the columns 'time', 'altitude', and 'velocity' EXACTLY. 
 No unit designation is required. Unit conversions are performed based on subsequent user input.
 """
 
