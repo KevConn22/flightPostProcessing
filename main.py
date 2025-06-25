@@ -38,13 +38,14 @@ realImpactVelocity = descentCharacteristics[4]
 realMaxKineticEnergy = descentCharacteristics[5]
 realMaxDrift = descentCharacteristics[6]
 
+actual = [ascentCharacteristics, descentCharacteristics]
+
 ## Flight Profile Target Definition
 # Subsequent user inputs define target values for in-flight performance characteristics
 targets = []
 
 print('')
 print('Target Inputs:')
-print('')
 
 targetApogee = float(input("Target Apogee [ft]: "))
 targetApogeeTime = float(input("Target Time to Apogee [s]: "))
@@ -61,3 +62,24 @@ targetMaxDrift = float(input("Target Maximum Drift [ft]: "))
 targets = [targetApogee, targetApogeeTime, targetMaxVelocity, targetDrogueDescent, targetMainDescent,
            targetFlightTime, targetDescentTime, targetImpactVelocity, targetMaxKineticEnergy, targetMaxDrift]
 
+
+
+absErrors = []
+relErrors = []
+
+# Defines errors between actual and target values
+for ii in range(len(targets)):
+    absErrors[ii] = actual[ii] - targets[ii]
+    relErrors[ii] = (actual[ii] - targets[ii])/actual[ii]
+
+"""
+root = Tk()
+root.title("Altimeter Post-Processing Tool")
+
+mainframe = ttk.Frame(root, padding="3 3 12 12")
+mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
+root.columnconfigure(0, weight=1)
+root.rowconfigure(0, weight=1)
+
+root.mainloop()
+"""
