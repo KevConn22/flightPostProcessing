@@ -107,3 +107,7 @@ def findDescentCharacteristics(data):
     maxDrift = descentTime * 20 * 5280 / 3600
     descentCharacteristics.append(maxDrift)
     return(descentCharacteristics)
+
+
+def findFlightCharacteristics(data):
+    print("Hello world!")
