@@ -28,6 +28,8 @@ root.rowconfigure(0, weight=1)
 
 # Define user inputs for results
 ttk.Label(mainframe, text="Input Parameters:").grid(column=1, row=1, columnspan=2, sticky=N)
+ttk.Label(mainframe, text="Outputs: ").grid(column=3, row = 1, columnspan=2, sticky=N)
+ttk.Label(mainframe, text="Functions:").grid(column=5, row = 1, sticky=N)
 
 targetApogee = StringVar()
 targetApogeeTime = StringVar()
@@ -52,7 +54,7 @@ impactVelocityEntry = ttk.Entry(mainframe, width=normWidth, textvariable=targetI
 maxKineticEnergyEntry = ttk.Entry(mainframe, width=normWidth, textvariable=targetMaxKineticEnergy)
 maxDriftEntry = ttk.Entry(mainframe, width=normWidth, textvariable=targetMaxDrift)
 
-apogeeEntry.grid(column = 2, row = 4, sticky=(N))
+apogeeEntry.grid(column = 2, row = 4, sticky=N)
 apogeeTimeEntry.grid(column=2, row = 5, sticky = N)
 maxVelocityEntry.grid(column=2, row = 6, sticky=N)
 drogueDescentEntry.grid(column=2, row = 7, sticky=N)
@@ -77,9 +79,11 @@ ttk.Label(mainframe, text="Maximum Vehicle Drift [ft]:").grid(column=1, row = 13
 ttk.Label(mainframe, text="Flight Parameter:").grid(column=1, row = 3, sticky=N)
 ttk.Label(mainframe, text="Targets:").grid(column=2, row = 3, sticky = N)
 ttk.Label(mainframe, text="Actual:").grid(column=3, row = 3, sticky=N)
+ttk.Label(mainframe, text="Absolute Error:").grid(column=4, row = 3, sticky=N)
+ttk.Label(mainframe, text="Percent Error:").grid(column=5, row = 3, sticky=N)
 
-ttk.Button(mainframe, text="Select File:", command=dataProcessing.extractData).grid(column=1, row=2, sticky=N)
-ttk.Button(mainframe, text="Analyze Flight Results", command=dataProcessing.findFlightCharacteristics).grid(column=3, row=2, sticky=N)
+ttk.Button(mainframe, text="Select File", command=dataProcessing.extractData).grid(column=5, row=2, sticky=N)
+# ttk.Button(mainframe, text="Analyze Flight Results", command=dataProcessing.findFlightCharacteristics).grid(column=3, row=2, sticky=N)
 
 for child in mainframe.winfo_children(): 
     child.grid_configure(padx=5, pady=5)
